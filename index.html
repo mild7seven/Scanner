@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#007bff">
+  <title>Scanner Struk Transfer</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h2>Scanner Rekening Penerima</h2>
+    
+    <div class="card">
+      <input type="file" id="imageInput" accept="image/*" capture="environment">
+      <button id="scanBtn" class="btn btn-primary">Proses Gambar</button>
+      <div id="status" class="status"></div>
+    </div>
+
+    <div class="card">
+      <h3>Hasil Pemindaian Terakhir</h3>
+      <div id="latestResult">Belum ada data diproses.</div>
+    </div>
+
+    <div class="card">
+      <div class="header-action">
+        <h3>Daftar Tersimpan</h3>
+        <div>
+          <button id="exportBtn" class="btn btn-success">Ekspor TXT</button>
+          <button id="clearBtn" class="btn btn-danger">Hapus Semua</button>
+        </div>
+      </div>
+      <ul id="dataList" class="data-list"></ul>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
